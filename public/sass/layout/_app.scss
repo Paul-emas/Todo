@@ -1,0 +1,219 @@
+.app {
+    width: 36rem;
+    height: 65rem;
+    position: relative;
+    margin: 10rem auto;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 0 2.1rem 2rem $color-primary-light;
+    border-radius: 1rem;
+    background-color: $color-white;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-top: 0;
+        box-shadow: none;
+    }
+}
+
+.sec {
+
+    &-container {
+        height: 23rem;
+        background-image: url('../img/fog-bg.jpg');
+        background-size: 100%;
+    }
+
+    &-header {
+        height: 98.5%;
+        border-bottom: 3px solid $color-primary;
+
+        &--content {
+            margin-left: 2.5rem;
+            margin-top: 7rem;
+        }
+    }
+
+    &-analysis {
+        background: rgba($color: #000000, $alpha: .3);
+        height: 100%;
+    }
+
+    &-title {
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &-date {
+        margin-top: 3rem;
+        color: #d2d2d2;
+    }
+
+    &-counter {
+        color: $color-white;
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        & .counter {
+            font-weight: 300;
+        }
+
+        &--box {
+            text-align: right;
+            width: 80%;
+            margin: 11rem auto;
+        }
+
+        &--caption {
+            font-size: 1rem;
+            color: #d2d2d2;
+        }
+    }
+
+    &-percentage {
+        font-weight: 300;
+        font-size: 1.02rem;
+
+        & i {
+            color: $color-primary;
+            font-size: 2rem;
+            margin-right: .5rem;
+        }
+
+        &--box {
+            position: relative;
+            top: 2rem;
+            color: #d2d2d2;
+        }
+    }
+}
+
+.list {
+
+    &-container {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        background-color: $color-white;
+    }
+
+    &-caption {
+        color: #9b9b9b;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
+
+    &-box {
+        width: 90%;
+        padding: 1rem 0;
+        padding-bottom: 5rem;
+
+        @include respond(tab-port) {
+            padding-bottom: 1rem;
+            width: 100%;
+        }
+    }
+
+    &-items {
+        width: 100%;
+        padding-bottom: 1rem;
+        list-style: none;
+        margin-bottom: 2rem;
+        display: flex;
+        cursor: pointer;
+        position: relative;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #d2d2d2;
+        }
+
+        & i {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+            border: 1px solid #d2d2d2;
+            text-align: center;
+            font-size: 2rem;
+            color: $color-primary;
+            line-height: 5rem;
+        }
+    }
+
+    &-info {
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+        position: relative;
+
+        &--details {
+            font-size: 1.1rem;
+            color: $color-primary;
+            font-weight: 600;
+        }
+
+        &--time {
+            position: absolute;
+            float: right;
+            right: 2rem;
+            top: 1.2rem;
+
+            @include respond(tab-land) {
+                right: 4rem;
+            }
+        }
+    }
+}
+
+.nav {
+
+    &-box {
+        background-color: $color-white;
+        width: 36rem;
+        position: fixed;
+        bottom: 7.7rem;
+        height: 5rem;
+        z-index: 2;
+        border-radius: 1rem;
+
+        @include respond(tab-port) {
+            bottom: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+
+
+        &--complete {
+            margin-left: 2rem;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        &--btn {
+            width: 5rem;
+            height: 5rem;
+            background-image: linear-gradient(to bottom, $color-primary, $color-primary-light);
+            border-radius: 5rem;
+            font-size: 2.2rem;
+            color: $color-white;
+            text-align: center;
+            line-height: 5rem !important;
+            cursor: pointer;
+            position: relative;
+            float: right;
+            right: 1rem;
+            top: -6rem;
+            box-shadow: 0 .2rem 1rem $color-primary;
+            transition: all .3s;
+
+            &:active {
+                transform: scale(.8);
+            }
+        }
+    }
+    
+}
